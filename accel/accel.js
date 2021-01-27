@@ -1,11 +1,8 @@
 var i2c = require('i2c-bus');
 
-const DEVICE_NUMBER = 1;
 const TARGET_IC_ADDR = 0x53;
+const ACCEL_REG = 0x32;
 
-var i2c_dev = i2c.openSync(DEVICE_NUMBER);
-
-var readBuf = new Buffer.alloc(0x10);
-i2c_dev.i2cReadSync(TARGET_IC_ADDR, readBuf.length, readBuf);
-
-console.log(readBuf);
+var i2c_dev = i2c.openSync(1);
+var rawData = i2c_dev.readWordSync(TARGET_IC_ADDR, ACCEL_REG);
+console.log(rawData);
