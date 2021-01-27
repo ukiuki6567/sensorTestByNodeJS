@@ -1,7 +1,7 @@
 var i2c = require('i2c-bus');
 
 const DEVICE_NUMBER = 1;
-const TARGET_IC_ADDR = 0x32;
+const TARGET_IC_ADDR = 0x1d;
 
 var i2c_dev = i2c.openSync(DEVICE_NUMBER);
 
