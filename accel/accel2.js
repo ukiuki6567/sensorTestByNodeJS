@@ -1,4 +1,4 @@
-const ADXL345 = require('adxl345-sensor');
+const ADXL345 = require('ADXL345');
 const adxl345 = new ADXL345();
 
 const getAcceleration = () => {
